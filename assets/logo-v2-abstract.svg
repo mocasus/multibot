@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" rx="80" fill="#11111B"/>
+  <!-- Central hex -->
+  <polygon points="200,80 300,140 300,260 200,320 100,260 100,140" fill="#CBA6F7" opacity="0.15" stroke="#CBA6F7" stroke-width="6"/>
+  <!-- Inner shapes -->
+  <circle cx="200" cy="200" r="50" fill="none" stroke="#89B4FA" stroke-width="4"/>
+  <rect x="170" y="140" width="60" height="120" rx="10" fill="none" stroke="#A6E3A1" stroke-width="4"/>
+  <line x1="140" y1="200" x2="260" y2="200" stroke="#F38BA8" stroke-width="4"/>
+</svg>

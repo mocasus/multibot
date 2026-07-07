@@ -1,0 +1,16 @@
+[Unit]
+Description=MultiBot — Telegram Multi-Tool Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/multibot
+ExecStart=/root/multibot/venv/bin/python3 /root/multibot/bot.py
+Restart=always
+RestartSec=5
+EnvironmentFile=/root/multibot/.env
+
+[Install]
+WantedBy=multi-user.target

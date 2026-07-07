@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: astral-sh/ruff-action@v3
+        with:
+          args: check --select E,F,W
+
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Syntax check all .py files
+        run: |
+          python -m py_compile bot.py
+          for f in handlers/*.py; do
+            python -m py_compile "$f" && echo "OK: $f"
+          done
+      - name: Check README for AI attribution
+        run: |
+          ! grep -in 'hermes\|managed by\|crafted by' README.md
+          echo "README.md clean ✓"
