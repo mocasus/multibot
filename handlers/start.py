@@ -1,37 +1,42 @@
-from telegram import Update
+from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, CommandHandler, ContextTypes
 from telegram.constants import ParseMode
 
-START_TEXT = """🤖 <b>MultiBot v1.0</b>
+HELP_TEXT = (
+    "🤖 <b>MultiBot v2.0</b>\n\n"
+    "Bot utility serbaguna dengan inline button.\n\n"
+    "📥 <b>Downloader</b>\n"
+    "• Video: TikTok, YT, IG, X, FB, Reddit\n"
+    "• Audio: Ekstrak MP3\n"
+    "• Playlist: Info playlist YT\n\n"
+    "📝 <b>Notebook</b>\n"
+    "• Simpan catatan auto .txt\n"
+    "• Multi-append + timestamp\n\n"
+    "🧰 <b>Tools</b>\n"
+    "• Kalkulator\n"
+    "• QR Code\n"
+    "• URL Shortener\n"
+    "• Cek Cuaca\n"
+    "• Stiker ↔ Foto\n\n"
+    "Ketik /menu atau /start buat mulai."
+)
 
-Bot utility serbaguna. Langsung aja:
-
-📥 <b>Download</b>
-<code>/dl [url]</code> — TikTok / YouTube / IG
-
-📱 <b>QR Code</b>
-<code>/qr [teks]</code> — Generate QR code
-
-🔗 <b>URL Shortener</b>
-<code>/short [url]</code> — Pendein URL
-
-🖼 <b>Sticker</b>
-Kirim foto → <code>/sticker</code> — Jadiin stiker
-Kirim stiker → <code>/toimg</code> — Jadiin foto
-
-🌤 <b>Cuaca</b>
-<code>/cuaca [kota]</code> — Info cuaca
-
-🧮 <b>Kalkulator</b>
-<code>/calc [ekspresi]</code> — Hitung
-
-Ketik /help buat lihat lagi."""
+def main_menu():
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("🎬 Downloader", callback_data="menu_dl")],
+        [InlineKeyboardButton("📝 Notebook", callback_data="menu_note")],
+        [InlineKeyboardButton("🧰 Tools", callback_data="menu_tools")],
+        [InlineKeyboardButton("ℹ️ Bantuan", callback_data="menu_help")],
+    ])
 
 async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(START_TEXT, parse_mode=ParseMode.HTML)
+    await update.message.reply_text(
+        "🤖 <b>MultiBot v2.0</b>\n\nPilih fitur:",
+        parse_mode=ParseMode.HTML, reply_markup=main_menu()
+    )
 
 async def cmd_help(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(START_TEXT, parse_mode=ParseMode.HTML)
+    await update.message.reply_text(HELP_TEXT, parse_mode=ParseMode.HTML, reply_markup=main_menu())
 
 def register(app: Application):
     app.add_handler(CommandHandler("start", cmd_start))

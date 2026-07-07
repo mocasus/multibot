@@ -11,3 +11,5 @@ ADMIN_IDS = set(
     for x in os.getenv("ADMIN_IDS", "").split(",")
     if x.strip().isdigit()
 )
+NOTEBOOK_DIR = Path(__file__).parent / "notebooks"
+NOTEBOOK_DIR.mkdir(exist_ok=True)
