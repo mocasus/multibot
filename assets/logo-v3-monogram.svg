@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <rect width="400" height="400" rx="80" fill="#1E1E2E"/>
-  <!-- M -->
-  <text x="200" y="260" font-family="'Courier New', monospace" font-size="180" font-weight="bold"
-        fill="#CBA6F7" text-anchor="middle">M</text>
-  <!-- B -->
-  <text x="200" y="260" font-family="'Courier New', monospace" font-size="180" font-weight="bold"
-        fill="#89B4FA" text-anchor="middle" dx="80">B</text>
-</svg>

@@ -159,17 +159,40 @@ Python 3.11+ · python-telegram-bot v22+ · httpx · yt-dlp · Pillow · OpenWea
 
 ---
 
-## 🎨 Logo Gallery
+## 🎨 Logo
 
-<table align="center">
-  <tr>
-    <td align="center"><img src="assets/logo-v1-robot.png" width="128"><br><b>Robot</b><br><code>logo-v1-robot</code></td>
-    <td align="center"><img src="assets/logo-v2-abstract.png" width="128"><br><b>Abstract</b><br><code>logo-v2-abstract</code></td>
-    <td align="center"><img src="assets/logo-v3-monogram.png" width="128"><br><b>Monogram</b><br><code>logo-v3-monogram</code></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="assets/logo-v1-robot.png" width="96"><br>
+  <sub><b>Style:</b> flat vector · two-tone · #2D1B69 + #667EEA</sub>
+</p>
 
-> 💡 Mau ganti logo? Generate via AI — rekomendasi prompt: *"flat vector robot icon, two-tone dark purple #2D1B69 + blue #667EEA, clean geometric shapes, no gradients, no shadows, no 3D, no text —Midjourney"*
+<details>
+<summary>🎭 Variant</summary>
+
+| Style | File |
+|-------|------|
+| Robot | `assets/logo-v1-robot.png` |
+| Abstract | `assets/logo-v2-abstract.png` |
+| Monogram | `assets/logo-v3-monogram.png` |
+
+</details>
+
+<details>
+<summary>🤖 AI Generation Prompt</summary>
+
+```
+Two-tone flat vector app icon, dark purple #2D1B69 background,
+blue #667EEA icon elements, clean geometric shapes.
+NO gradients, NO glow, NO sparkle, NO 3D, NO text.
+Rounded corners 80px, 400x400 canvas.
+—style flat —ar 1:1
+```
+```
+dua-tone flat vector icon bot Telegram, background ungu gelap
+#2D1B69, elemen biru #667EEA, bentuk geometris bersih,
+rounded corners, no shadow, no gradient, no text
+```
+</details>
 
 ---
 
