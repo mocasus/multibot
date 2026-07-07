@@ -1,64 +1,63 @@
-<div align="center">
+<p align="center">
   <img src="assets/logo-v1-robot.png" width="128" height="128" alt="MultiBot Logo">
-  <h1>🤖 MultiBot</h1>
-  <p><b>Telegram multi-tool bot</b> — download, QR, shortlink, sticker, cuaca, kalkulator.</p>
+</p>
 
-  <p>
-    <a href="https://github.com/mocasus/multibot/releases"><img src="https://img.shields.io/badge/version-v1.0-181717?style=flat-square&logo=github" alt="Version"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"></a>
-    <img src="https://img.shields.io/badge/python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
-    <img src="https://img.shields.io/badge/code%20style-ruff-30173D?style=flat-square&logo=ruff" alt="Ruff">
-    <img src="https://img.shields.io/badge/LOC-447-181717?style=flat-square" alt="LOC">
-  </p>
+<h3 align="center">🤖 MultiBot</h3>
+<p align="center"><sub>Telegram multi-tool bot · inline UI · 9 modul handler · by <a href="https://github.com/mocasus">mmoaa</a></sub></p>
 
-  <p>
-    <a href="https://github.com/mocasus/multibot/stargazers"><img src="https://img.shields.io/github/stars/mocasus/multibot?style=flat-square&cacheSeconds=86400" alt="Stars"></a>
-    <a href="https://github.com/mocasus/multibot/network/members"><img src="https://img.shields.io/github/forks/mocasus/multibot?style=flat-square&cacheSeconds=86400" alt="Forks"></a>
-    <a href="https://github.com/mocasus/multibot/issues"><img src="https://img.shields.io/github/issues/mocasus/multibot?style=flat-square&cacheSeconds=86400" alt="Issues"></a>
-    <img src="https://img.shields.io/github/last-commit/mocasus/multibot?style=flat-square&cacheSeconds=86400" alt="Last Commit">
-    <img src="https://img.shields.io/github/repo-size/mocasus/multibot?style=flat-square&cacheSeconds=86400" alt="Repo Size">
-  </p>
+<p align="center">
+  <a href="https://github.com/mocasus/multibot/releases"><img src="https://img.shields.io/badge/version-v2.0-181717?style=flat-square&logo=github" alt="Version"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"></a>
+  <img src="https://img.shields.io/badge/python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/code%20style-ruff-30173D?style=flat-square&logo=ruff" alt="Ruff">
+  <img src="https://img.shields.io/badge/handlers-9-4CAF50?style=flat-square" alt="Handlers">
+</p>
 
-  <p>
-    <a href="#-features"><img src="https://img.shields.io/badge/Features-✨-brightgreen?style=flat-square" alt="Features"></a>
-    <a href="#-quick-start"><img src="https://img.shields.io/badge/Quick_Start-🚀-orange?style=flat-square" alt="Quick Start"></a>
-    <a href="#-commands"><img src="https://img.shields.io/badge/Commands-📋-blue?style=flat-square" alt="Commands"></a>
-    <a href="#-deploy"><img src="https://img.shields.io/badge/Deploy-🖥-red?style=flat-square" alt="Deploy"></a>
-    <a href="#-project-structure"><img src="https://img.shields.io/badge/Structure-📁-gray?style=flat-square" alt="Structure"></a>
-  </p>
-</div>
+<p align="center">
+  <a href="https://github.com/mocasus/multibot/stargazers"><img src="https://img.shields.io/github/stars/mocasus/multibot?style=flat-square&cacheSeconds=86400" alt="Stars"></a>
+  <a href="https://github.com/mocasus/multibot/network/members"><img src="https://img.shields.io/github/forks/mocasus/multibot?style=flat-square&cacheSeconds=86400" alt="Forks"></a>
+  <a href="https://github.com/mocasus/multibot/issues"><img src="https://img.shields.io/github/issues/mocasus/multibot?style=flat-square&cacheSeconds=86400" alt="Issues"></a>
+  <img src="https://img.shields.io/github/last-commit/mocasus/multibot?style=flat-square&cacheSeconds=86400" alt="Last Commit">
+  <img src="https://img.shields.io/github/repo-size/mocasus/multibot?style=flat-square&cacheSeconds=86400" alt="Repo Size">
+</p>
 
----
-
-## ✨ Features
-
-- 📥 **Video Downloader** — Download video dari Instagram, TikTok, YouTube dengan `/dl`
-- 🔳 **QR Code Generator** — Generate QR code langsung di chat dengan `/qr`
-- 🔗 **URL Shortener** — Pendein URL via TinyURL / is.gd dengan `/short`
-- 🖼 **Sticker Converter** — Konversi foto ↔ stiker dengan `/sticker` & `/toimg`
-- 🌤 **Cek Cuaca** — Info cuaca real-time dengan `/cuaca [kota]`
-- 🧮 **Kalkulator** — Hitung ekspresi matematika dengan `/calc`
+<p align="center">
+  <a href="#-about"><img src="https://img.shields.io/badge/About-📖-brightgreen?style=flat-square" alt="About"></a>
+  <a href="#-quick-start"><img src="https://img.shields.io/badge/Quick_Start-🚀-orange?style=flat-square" alt="Quick Start"></a>
+  <a href="#-commands"><img src="https://img.shields.io/badge/Commands-📋-blue?style=flat-square" alt="Commands"></a>
+  <a href="#-deploy"><img src="https://img.shields.io/badge/Deploy-🖥-red?style=flat-square" alt="Deploy"></a>
+  <a href="#-project-structure"><img src="https://img.shields.io/badge/Structure-📁-gray?style=flat-square" alt="Structure"></a>
+</p>
 
 ---
 
-## 🚀 Quick Start
+## 📖 About
+
+**MultiBot** adalah bot Telegram serbaguna dengan antarmuka tombol inline (Bot API 10.1). Kirim perintah atau ketuk tombol — bot langsung proses. Dibangun di atas `python-telegram-bot` v22+ dengan arsitektur modular: 9 handler terpisah, masing-masing menangani satu domain fitur.
+
+Bot ini support **rich message** (headings, tabel, collapsible `<details>`, styled buttons) via `sendRichMessage` API, serta fallback HTML untuk kompatibilitas penuh. Ideal buat bot utility, personal assistant, atau foundation buat bot yang lebih kompleks.
+
+---
+
+## ⚡ Quick Start
 
 ```bash
-# Clone
-git clone https://github.com/mocasus/multibot.git
-cd multibot
-
-# Setup venv + install
+git clone https://github.com/mocasus/multibot.git && cd multibot
 python3 -m venv venv
 ./venv/bin/pip install -r requirements.txt
-
-# Konfigurasi
 cp .env .env.local
-# Edit .env.local — isi BOT_TOKEN dari BotFather
-
-# Jalankan
+# edit .env.local — isi BOT_TOKEN dari @BotFather
 ./venv/bin/python3 bot.py
 ```
+
+<details>
+<summary>📋 Output yang diharapkan</summary>
+
+```
+2026-07-08 INFO: Registered 10 handlers
+2026-07-08 INFO: Bot mulai polling...
+```
+</details>
 
 ---
 
@@ -66,15 +65,34 @@ cp .env .env.local
 
 | Command | Fungsi | Contoh |
 |---------|--------|--------|
-| `/start` | Info bot & welcome | `/start` |
-| `/help` | List semua command | `/help` |
+| `/start` | Welcome + menu inline (3 varian acak) | `/start` |
+| `/help` | Panduan lengkap | `/help` |
+| `/menu` | Menu utama | `/menu` |
 | `/dl [url]` | Download video | `/dl https://instagram.com/p/...` |
+| `/dlmp3 [url]` | Ekstrak audio MP3 | `/dlmp3 https://youtube.com/...` |
 | `/qr [teks]` | Generate QR code | `/qr https://github.com` |
-| `/short [url]` | Shorten URL | `/short https://example.com/very/long` |
+| `/short [url]` | Shorten URL (TinyURL/is.gd) | `/short https://example.com/long` |
 | `/sticker` | Foto → Stiker (reply foto) | Reply foto + `/sticker` |
 | `/toimg` | Stiker → PNG (reply stiker) | Reply stiker + `/toimg` |
-| `/cuaca [kota]` | Cek cuaca | `/cuaca Jakarta` |
-| `/calc [ekspr]` | Kalkulator | `/calc sqrt(144) + 2^3` |
+| `/cuaca [kota]` | Cek cuaca real-time | `/cuaca Jakarta` |
+| `/calc [ekspr]` | Kalkulator (math parser) | `/calc sqrt(144) + 2^3` |
+| `/note [teks]` | Simpan catatan + timestamp | `/note ide startup besok` |
+
+---
+
+## ✨ Fitur
+
+| Fitur | Detail |
+|-------|--------|
+| 🎬 **Downloader** | TikTok, IG, YT, X, FB, Reddit — MP4 & MP3 |
+| 📝 **Notebook** | Simpan catatan `.txt` — multi-append + auto-timestamp |
+| 🧮 **Kalkulator** | Parser matematika lengkap (sin, cos, sqrt, ln, etc) |
+| 🔳 **QR Code** | Generate QR code, langsung kirim gambar |
+| 🔗 **URL Shortener** | TinyURL & is.gd — auto-fallback |
+| 🌤 **Cuaca** | Info cuaca real-time via OpenWeatherMap |
+| 🖼 **Stiker** | Konversi foto ↔ stiker Telegram |
+| 🎨 **Rich Welcome** | 3 varian welcome acak — headings, `<details>`, tabel |
+| 🎯 **Styled Buttons** | Primary/success/danger style + copy-to-clipboard |
 
 ---
 
@@ -98,15 +116,13 @@ docker run -d --env-file .env --name multibot multibot
 
 ---
 
-## ⚙️ Konfigurasi
+## ⚙ Environment
 
-Edit `.env`:
-
-| Variable | Required | Deskripsi |
-|----------|----------|-----------|
-| `BOT_TOKEN` | ✅ | Token dari [@BotFather](https://t.me/BotFather) |
-| `WEATHER_API_KEY` | ❌ | API key [OpenWeatherMap](https://openweathermap.org/api) (untuk `/cuaca`) |
-| `ADMIN_IDS` | ❌ | Telegram user ID admin (pisah koma) |
+| Variable | Required | Default | Deskripsi |
+|----------|----------|---------|-----------|
+| `BOT_TOKEN` | ✅ | — | Token dari [@BotFather](https://t.me/BotFather) |
+| `WEATHER_API_KEY` | ❌ | — | API key [OpenWeatherMap](https://openweathermap.org/api) (untuk `/cuaca`) |
+| `ADMIN_IDS` | ❌ | — | Telegram user ID admin (pisah koma) |
 
 ---
 
@@ -114,32 +130,32 @@ Edit `.env`:
 
 ```
 multibot/
-├── bot.py                  # Entry point
-├── config.py               # Env loader
-├── requirements.txt        # Dependencies
+├── bot.py                  # Entry point — build Application, register handlers
+├── config.py               # Env loader (.env → typed constants)
+├── requirements.txt        # python-telegram-bot, httpx, yt-dlp, pillow
 ├── .env                    # Konfigurasi (gitignored)
+├── .env.example            # Template konfigurasi
+├── Dockerfile              # Container deployment
 ├── multibot.service        # systemd unit file
 └── handlers/
-    ├── start.py            # /start, /help
-    ├── download.py         # /dl — video downloader
-    ├── qr.py               # /qr — QR generator
+    ├── __init__.py
+    ├── start.py            # /start (3 varian welcome), /help
+    ├── rich.py             # sendRichMessage + btn helpers (Bot API 10.1)
+    ├── menu.py             # Inline menu router + callback dispatcher
+    ├── download.py         # /dl, /dlmp3 — video/audio downloader
+    ├── notebook.py         # /note — simpan catatan .txt
+    ├── qr.py               # /qr — QR code generator
     ├── shorten.py          # /short — URL shortener
-    ├── sticker.py          # /sticker, /toimg
-    ├── weather.py          # /cuaca — weather
-    └── calc.py             # /calc — calculator
+    ├── weather.py          # /cuaca — weather info
+    ├── calc.py             # /calc — math calculator
+    └── sticker.py          # /sticker, /toimg — sticker ↔ photo
 ```
 
 ---
 
 ## 🛠 Tech Stack
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Telegram_Bot_API-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
-  <img src="https://img.shields.io/badge/yt--dlp-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="yt-dlp">
-  <img src="https://img.shields.io/badge/Pillow-512BD4?style=for-the-badge&logo=python&logoColor=white" alt="Pillow">
-  <img src="https://img.shields.io/badge/systemd-E95420?style=for-the-badge&logo=linux&logoColor=white" alt="systemd">
-</p>
+Python 3.11+ · python-telegram-bot v22+ · httpx · yt-dlp · Pillow · OpenWeatherMap API · TinyURL API · systemd · Docker · Bot API 10.1 (rich messages + styled buttons)
 
 ---
 
@@ -153,10 +169,10 @@ multibot/
   </tr>
 </table>
 
-> 💡 Mau ganti logo? Generate pake AI prompt — rekomendasi: *"flat vector robot icon, two-tone dark purple + blue, clean geometric shapes, Catppuccin mocha palette, no gradients —Midjourney"*
+> 💡 Mau ganti logo? Generate via AI — rekomendasi prompt: *"flat vector robot icon, two-tone dark purple #2D1B69 + blue #667EEA, clean geometric shapes, no gradients, no shadows, no 3D, no text —Midjourney"*
 
 ---
 
-<div align="center">
-  <sub>v1.0 · 2026 · Built by <a href="https://github.com/mocasus">@mocasus</a></sub>
-</div>
+<p align="center">
+  <sub>v2.0 · 2026 · MIT License · Built by <a href="https://github.com/mocasus">mmoaa</a></sub>
+</p>

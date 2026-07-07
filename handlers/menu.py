@@ -92,10 +92,6 @@ async def callback_router(update: Update, context: ContextTypes.DEFAULT_TYPE):
             parse_mode="HTML", reply_markup=tools_menu()
         )
 
-    elif data == "menu_help":
-        from .start import HELP_TEXT
-        await query.edit_message_text(HELP_TEXT, parse_mode="HTML", reply_markup=back_button())
-
     elif data == "tool_calc":
         context.user_data["state"] = STATE_CALC_EXPR
         await query.edit_message_text(
